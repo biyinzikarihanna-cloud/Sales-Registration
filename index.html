@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NyondoStock · Sales registration (Flexbox demo)</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="user">
+        <div class="user-name">John Mwale</div>
+        <div class="user-role">Administrator</div>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li>📊 Dashboard</li>
+          <li class="active">📦 Sales Management</li>
+          <li>🚚 Supplier Management</li>
+          <li>📦 Stock Management</li>
+          <li>🚛 Transport Management</li>
+        </ul>
+      </nav>
+    </aside>
+
+ 
+    <main class="content">
+      <h1>Sales Registration</h1>
+
+      <form class="sales-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="sale-date">Sale Date</label>
+            <input type="date" id="sale-date" name="saleDate" value="2026-03-14">
+          </div>
+          <div class="form-group">
+            <label for="sales-person">Sales Person</label>
+            <select id="sales-person" name="salesPerson">
+              <option value="" disabled selected>Select sales representative</option>
+              <option value="alice">Alice Kamau</option>
+              <option value="bob">Bob Mwansa</option>
+              <option value="celia">Celia Phiri</option>
+            </select>
+          </div>
+        </div>
+
+  
+        <fieldset class="customer-fieldset">
+          <legend>Customer Details</legend>
+          <div class="customer-fields">
+            <div class="form-group">
+              <label for="cust-name">Name</label>
+              <input type="text" id="cust-name" placeholder="Enter full name">
+            </div>
+            <div class="form-group">
+              <label for="cust-phone">Phone Number</label>
+              <input type="tel" id="cust-phone" placeholder="Enter Phone Number">
+            </div>
+            <div class="form-group">
+              <label for="cust-email">Email</label>
+              <input type="email" id="cust-email" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="cust-type">Type</label>
+              <select id="cust-type">
+                <option value="" disabled selected>Select customer Type</option>
+                <option value="retailer">Retailer</option>
+                <option value="wholesaler">Wholesaler</option>
+                <option value="distributor">Distributor</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+
+    
+        <div class="items-section">
+          <h2>Items</h2>
+      
+          <div class="items-header">
+            <span>Pdt ID</span>
+            <span>Quantity</span>
+            <span>Unit Price</span>
+          </div>
+
+         
+          <div class="item-row">
+            <input type="text" placeholder="Pdt ID e.g. NY-100">
+            <input type="number" placeholder="Qty" min="1" value="2">
+            <input type="number" placeholder="Unit price" step="0.01" min="0" value="25.00">
+          </div>
+          <div class="item-row">
+            <input type="text" placeholder="Pdt ID e.g. NY-205">
+            <input type="number" placeholder="Qty" min="1" value="1">
+            <input type="number" placeholder="Unit price" step="0.01" min="0" value="89.50">
+          </div>
+          <div class="item-row">
+            <input type="text" placeholder="Pdt ID e.g. NY-308">
+            <input type="number" placeholder="Qty" min="1" value="5">
+            <input type="number" placeholder="Unit price" step="0.01" min="0" value="12.30">
+          </div>
+
+         
+          <button type="button" class="add-item">➕ Add another item</button>
+        </div>
+
+        
+        <div class="form-actions">
+          <button type="button" class="cancel">Cancel</button>
+          <button type="submit" class="submit">Submit sale</button>
+        </div>
+      </form>
+    </main>
+  </div>
+</body>
+</html>
